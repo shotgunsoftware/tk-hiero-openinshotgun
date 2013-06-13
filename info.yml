@@ -1,0 +1,6 @@
+# expected fields in the configuration file for this app
+configuration:
+
+# the Shotgun fields that this app needs in order to operate correctly
+requires_shotgun_fields:
+
