@@ -11,6 +11,7 @@ from PySide import QtCore
 import hiero.core
 
 from tank.platform import Application
+from tank import TankError
 
 class HieroOpenInShotgun(Application):
     """
@@ -72,5 +73,5 @@ class HieroOpenInShotgun(Application):
         
         # launch Shotgun Url using default browser
         url = "%s/detail/Shot/%s" % (self.shotgun.base_url, sg_data["id"])        
-        QtGui.QDesktopServices.openUrl(QtCore.QUrl(context.shotgun_url))
+        QtGui.QDesktopServices.openUrl(QtCore.QUrl(url))
         
