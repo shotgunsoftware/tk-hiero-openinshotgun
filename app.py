@@ -32,6 +32,13 @@ class HieroOpenInShotgun(Application):
         """
         self.engine.register_command("Open in Shotgun", self.callback)
 
+    @property
+    def context_change_allowed(self):
+        """
+        Specifies that context changes are allowed.
+        """
+        return True
+
     def callback(self):
         """
         Command implementation
