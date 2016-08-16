@@ -63,6 +63,12 @@ class HieroOpenInShotgun(Application):
         # grab the current selection from the view that triggered the event.
         selection = self.engine.get_menu_selection()
 
+        # Exclude transisions from the list of selected items if this version of
+        # hiero supports effects
+        if hasattr(hiero.core, "Transition"):
+            selection = [s for s in selection
+                         if not isinstance(s, hiero.core.Transition)]
+
         # Exclude effects from the list of selected items if this version of
         # hiero supports effects
         if hasattr(hiero.core, "EffectTrackItem"):
