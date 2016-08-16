@@ -61,9 +61,13 @@ class HieroOpenInShotgun(Application):
         """
 
         # grab the current selection from the view that triggered the event.
-        # Exclude effects from the list of selected items
-        selection = [s for s in self.engine.get_menu_selection()
-            if not isinstance(s, hiero.core.EffectTrackItem)]
+        selection = self.engine.get_menu_selection()
+
+        # Exclude effects from the list of selected items if this version of
+        # hiero supports effects
+        if hasattr(hiero.core, "EffectTrackItem"):
+            selection = [s for s in selection
+                if not isinstance(s, hiero.core.EffectTrackItem)]
 
         if len(selection) != 1:
             raise TankError("Please select a single Shot!")
