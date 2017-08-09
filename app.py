@@ -12,13 +12,11 @@
 Open selection in Shotgun
 """
 
-from PySide import QtGui
-from PySide import QtCore
-
 import hiero.core
 
 from tank.platform import Application
 from tank import TankError
+from tank.platform.qt import QtGui, QtCore
 
 class HieroOpenInShotgun(Application):
     """
