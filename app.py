@@ -92,7 +92,7 @@ class HieroOpenInShotgun(Application):
                        (shot_name, sequence_name))
 
         filters = []
-        filters.append(["Project", "is", project])
+        filters.append(["project", "is", project])
         filters.append(["sg_sequence.Sequence.code", "is", sequence_name])
         filters.append(["code", "is", shot_name])
 
