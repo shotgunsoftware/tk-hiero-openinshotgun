@@ -101,7 +101,7 @@ class HieroOpenInShotgun(Application):
 
         if sg_data is None:
             raise TankError(
-                "Could not find a Shot in Shotgun with name '%s' associated with a Sequence '%s'!"
+                "Could not find a Shot in SG with name '%s' associated with a Sequence '%s'!"
                 % (shot_name, sequence_name)
             )
 
