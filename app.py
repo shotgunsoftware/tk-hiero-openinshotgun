@@ -29,7 +29,7 @@ class HieroOpenInShotgun(Application):
         """
         Initialization
         """
-        self.engine.register_command("Open in ShotGrid", self.callback)
+        self.engine.register_command("Open in Shotgun", self.callback)
 
     @property
     def context_change_allowed(self):
