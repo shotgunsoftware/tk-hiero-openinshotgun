@@ -89,7 +89,7 @@ class HieroOpenInShotgun(Application):
         sequence_name = sequence.name()
 
         self.log_debug(
-            "Looking for a shot '%s' with a sequence '%s' in ShotGrid..."
+            "Looking for a shot '%s' with a sequence '%s' in Flow Production Tracking..."
             % (shot_name, sequence_name)
         )
 
@@ -101,7 +101,7 @@ class HieroOpenInShotgun(Application):
 
         if sg_data is None:
             raise TankError(
-                "Could not find a Shot in ShotGrid with name '%s' associated with a Sequence '%s'!"
+                "Could not find a Shot in Flow Production Tracking with name '%s' associated with a Sequence '%s'!"
                 % (shot_name, sequence_name)
             )
 
