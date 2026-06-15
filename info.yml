@@ -11,3 +11,4 @@ requires_shotgun_fields:
 display_name: "Open In Flow Production Tracking"
 description: "App that adds a context menu to open track items as Shots in
              Flow Production Tracking"
+minimum_python_version: "3.9"
